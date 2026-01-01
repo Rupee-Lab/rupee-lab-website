@@ -14,25 +14,27 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Here you would typically send the email to your backend
-        // For now, we'll just show a success message
-        showMessage('Thanks! We\'ll notify you when we launch.', 'success');
-        emailInput.value = '';
-        
-        // In a real implementation, you would make an API call here:
-        // fetch('/api/signup', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify({ email: email })
-        // })
-        // .then(response => response.json())
-        // .then(data => {
-        //     showMessage('Thanks! We\'ll notify you when we launch.', 'success');
-        //     emailInput.value = '';
-        // })
-        // .catch(error => {
-        //     showMessage('Something went wrong. Please try again.', 'error');
-        // });
+        // Submit to Netlify Forms
+        const formData = new FormData();
+        formData.append('form-name', 'signup');
+        formData.append('email', email);
+
+        fetch('/', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                showMessage('Thanks! We\'ll notify you when we launch.', 'success');
+                emailInput.value = '';
+            } else {
+                throw new Error('Submission failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            showMessage('Something went wrong. Please try again.', 'error');
+        });
     });
 
     function isValidEmail(email) {
