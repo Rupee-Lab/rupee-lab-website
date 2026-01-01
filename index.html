@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RupeeLab — Research-backed personal finance tools for India</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="RupeeLab Logo" class="logo-image">
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h2 class="headline">Research-backed personal finance tools for India</h2>
+                <p class="subhead">We're building simple tools to help you make better long-term money decisions.</p>
+            </section>
+
+            <section class="coming-soon">
+                <div class="status-badge">In Development</div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                            <line x1="8" y1="6" x2="16" y2="6"></line>
+                            <line x1="16" y1="14" x2="16" y2="18"></line>
+                            <path d="M16 10h.01"></path>
+                            <path d="M12 10h.01"></path>
+                            <path d="M8 10h.01"></path>
+                            <path d="M12 14h.01"></path>
+                            <path d="M8 14h.01"></path>
+                            <path d="M12 18h.01"></path>
+                            <path d="M8 18h.01"></path>
+                        </svg>
+                    </div>
+                    <div class="tool-info">
+                        <span class="tool-name">Retirement Guardrails Calculator</span>
+                        <span class="version-tag">v1.0</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="signup">
+                <h3>Get tool updates & deep dives.</h3>
+                <p class="signup-note">Infrequent emails. No spam. Unsubscribe anytime.</p>
+                <form id="signup-form" class="signup-form">
+                    <div class="input-group">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter your email" 
+                            required
+                            aria-label="Email address"
+                        >
+                        <button type="submit" class="btn-notify">Notify me</button>
+                    </div>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p class="footer-note">We don't sell your data.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
