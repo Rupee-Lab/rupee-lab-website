@@ -15,13 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Submit to Netlify Forms
-        const formData = new FormData();
-        formData.append('form-name', 'signup');
-        formData.append('email', email);
+        const formData = new FormData(form);
 
         fetch('/', {
             method: 'POST',
-            body: formData
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
         })
         .then(response => {
             if (response.ok) {
