@@ -9,4 +9,4 @@ Disallow: /actuator
 Disallow: /_all_dbs
 Disallow: /.netlify/
 
-# Sitemap: https://rupeelab.in/sitemap.xml
+Sitemap: https://rupeelab.in/sitemap.xml
