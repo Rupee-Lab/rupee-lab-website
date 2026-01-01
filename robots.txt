@@ -1,11 +1,12 @@
-# RupeeLab robots.txt
 User-agent: *
 Allow: /
 
-# Block form submission endpoints
+# Block non-existent / noisy endpoints
 Disallow: /api/
+Disallow: /graphql
+Disallow: /swagger
+Disallow: /actuator
+Disallow: /_all_dbs
 Disallow: /.netlify/
 
-# Future sitemap reference (add when ready)
 # Sitemap: https://rupeelab.in/sitemap.xml
-
