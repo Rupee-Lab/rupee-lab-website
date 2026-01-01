@@ -1,0 +1,11 @@
+# RupeeLab robots.txt
+User-agent: *
+Allow: /
+
+# Block form submission endpoints
+Disallow: /api/
+Disallow: /.netlify/
+
+# Future sitemap reference (add when ready)
+# Sitemap: https://rupeelab.in/sitemap.xml
+
